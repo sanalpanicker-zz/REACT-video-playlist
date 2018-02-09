@@ -7,15 +7,18 @@ import React from 'react';
 
 //converting fucntional compnent to a class component
 class SearchBar extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            term: ""
+        };
+    }
     render = () => {
         return <input onChange = {
-            this.onInputChange
+            e => console.log(e.target.value)
         }
         />;
-    }
-
-    onInputChange = () => {
-        alert("clicked");
     }
 }
 export default SearchBar;
